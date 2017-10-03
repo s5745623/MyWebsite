@@ -1,6 +1,14 @@
 ## Welcome to Steven Yuan-Yao Chang's profolio
 
-[123](https://public.tableau.com/views/HW4_42/Story2?:embed=y&:display_count=yes&publish=yes)
+
+[Inclass_2](http://stevenyychang.georgetown.domains/Week2ActivityVis.html)
+[HW2](https://public.tableau.com/profile/yuan.yao.chang#!/vizhome/HW2_52/Dashboard2)
+[Inclass_4](https://public.tableau.com/views/inclass_9/Story1?:embed=y&:display_count=yes&publish=yes)
+[HW4](https://public.tableau.com/views/HW4_42/Story2?:embed=y&:display_count=yes&publish=yes)
+
+
+
+
 
 ### Markdown
 
@@ -25,11 +33,3 @@ Syntax highlighted code block
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/s5745623/MyWebsite/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
