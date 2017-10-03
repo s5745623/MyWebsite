@@ -1,4 +1,4 @@
-## Welcome to Steven Yuan-Yao Chang's profolio
+## Welcome to Steven Yuan-Yao Chang's portfolio
 
 
 [Inclass_2](http://stevenyychang.georgetown.domains/Week2ActivityVis.html)
