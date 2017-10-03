@@ -1,7 +1,7 @@
 ## Welcome to Steven Yuan-Yao Chang's profolio
 
 
-<p>[Inclass_2](http://stevenyychang.georgetown.domains/Week2ActivityVis.html)</p>
+[Inclass_2](http://stevenyychang.georgetown.domains/Week2ActivityVis.html)
 
 [HW2](https://public.tableau.com/profile/yuan.yao.chang#!/vizhome/HW2_52/Dashboard2)
 
