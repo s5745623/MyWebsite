@@ -1,4 +1,4 @@
-## Welcome to Steven Yuan-Yao Chang's portfolio
+## Welcome to Steven Chang's portfolio
 ### Current Work
 
 [Population of US Cities](http://stevenyychang.georgetown.domains/Week2ActivityVis.html)
@@ -8,6 +8,8 @@
 [Wine analysis](https://public.tableau.com/views/inclass_9/Story1?:embed=y&:display_count=yes&publish=yes)
 
 [When is the best shift hours for NYC Yellow Taxi drivers?](https://public.tableau.com/views/HW4_42/Story2?:embed=y&:display_count=yes&publish=yes)
+[Heat Map of Taxi pickups in NYC]
+(https://s3.amazonaws.com/StevenChang/Massive+Data/HeatMap_zoom.gif)
 
 [Wage analysis](http://stevenyychang.georgetown.domains/HW5.html)
 
