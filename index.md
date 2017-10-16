@@ -1,7 +1,7 @@
 ## Welcome to Steven Yuan-Yao Chang's portfolio
 ### Current Work
 
-[Inclass_2](http://stevenyychang.georgetown.domains/Week2ActivityVis.html)
+[Population of US Cities](http://stevenyychang.georgetown.domains/Week2ActivityVis.html)
 
 ["Most Dangerous Places" in Mongomery, MD?](https://public.tableau.com/profile/yuan.yao.chang#!/vizhome/HW2_52/Dashboard2)
 
