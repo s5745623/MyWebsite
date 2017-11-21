@@ -1,0 +1,34 @@
+---
+title: "Terror"
+author: "StevenChang"
+date: "11/18/2017"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+library(reshape2)
+library(ggthemes)
+require(gridExtra)
+library(forcats)
+
+data = read.csv('global_terrorism.csv')
+```
+
+
+```{r, fig.width=13,fig.height=8}
+
+g3<-ggplot(data, aes(iyear,region_txt,color=nkill,size = nkill)) + geom_point() + theme_solarized()+ ggtitle("Year and Continent")+theme(axis.text.x= element_text(angle = 65, vjust = 0.7))
+
+g1<-ggplot(data, aes(iyear,nkill,color=nkill)) + geom_point() + theme_solarized()+ ggtitle("Year and death count")+ theme(legend.position="none")
+
+g2<-ggplot(data, aes(targtype1_txt,attacktype1_txt,color=nkill,size = nkill)) + geom_point() + theme_solarized()+ ggtitle("TargetType and AttackType")+theme(axis.text.x= element_text(angle = 65, vjust = 0.7))+ aes(x = fct_inorder(targtype1_txt))+ theme(legend.position="none")
+
+#grid.arrange(g1,g2,g3,nrow=2,ncol=2)
+image = grid.arrange(g3, arrangeGrob(g2,g1, ncol=2), heights=c(2, 2), ncol=1)
+
+ggsave(file="Terror.svg", plot=image, width=13, height=8)
+```
+
+
+

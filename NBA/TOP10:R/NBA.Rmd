@@ -1,0 +1,42 @@
+---
+title: "NBA"
+author: "StevenChang"
+date: "11/19/2017"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+library(reshape2)
+library(ggthemes)
+require(gridExtra)
+library(forcats)
+
+
+dataStats = read.csv('NBA_stats.csv')
+dataSalary = read.csv('NBA_salary.csv')
+
+dataSalary_sub =subset(dataSalary,Name=='Russell Westbrook' | Name=='LeBron James'| Name=='Kevin Durant'| Name=='James Harden'| Name=='Stephen Curry'| Name=='Paul George'| Name=='Damian Lillard' | Name=='Kawhi Leonard'| Name=='John Wall'| Name=='Kyrie Irving')
+
+dataStats_sub=subset(dataStats,Name=='Russell Westbrook' | Name=='LeBron James'| Name=='Kevin Durant'| Name=='James Harden'| Name=='Stephen Curry'| Name=='Paul George'| Name=='Damian Lillard' | Name=='Kawhi Leonard'| Name=='John Wall'| Name=='Kyrie Irving')
+```
+
+
+
+```{r, fig.width=15,fig.height=10}
+
+g1<-ggplot(dataSalary_sub, aes(Season,Salary,color=Name,size = Salary)) +geom_point()  +theme_minimal()+ ggtitle("TOP10 Salary in Season")+theme(axis.text.x= element_text(angle = 65, vjust = 0.7))
+
+g2<-ggplot(dataSalary_sub, aes(Name,Salary,color=Name)) +geom_boxplot()  +theme_minimal()+ ggtitle("TOP10 Salary by Name")+theme(axis.text.x= element_text(angle = 65, vjust = 0.7))+ theme(legend.position="none")
+
+#EFF
+dataStats_sub$EFF = (dataStats_sub$PTS+dataStats_sub$TRB+dataStats_sub$AST+dataStats_sub$STL+dataStats_sub$BLK-(dataStats_sub$FGA-dataStats_sub$FG)-(dataStats_sub$FTA-dataStats_sub$FT)-dataStats_sub$TOV)/dataStats_sub$G
+
+g3<-ggplot(dataStats_sub, aes(Season,EFF,color=Name,group=Name)) + geom_line() + geom_point()  +theme_minimal() + ggtitle("TOP10 EFF by Season")+theme(axis.text.x= element_text(angle = 65, vjust = 0.7))+ theme(legend.position="none")
+
+g4<-ggplot(dataStats_sub, aes(Name,EFF,color=Season,size=EFF)) +geom_point()  +theme_minimal()+ ggtitle("TOP10 EFF by Name")+theme(axis.text.x= element_text(angle = 65, vjust = 0.7))
+
+image = grid.arrange(g1,g2,g3,g4, nrow=2, ncol=2)
+ggsave(file="NBA_TOP10.svg", plot=image, width=15, height=10)
+```
+
