@@ -94,15 +94,15 @@ tr{
 <div class="headerLogo">
 <img src="http://stevenyychang.georgetown.domains/HeaderLogo/dc.jpg" />
 </div>
-
 <ul>
-  <li><a href="#home">Home</a></li>
+  <li><a href="http://stevenyychang.georgetown.domains/index.html">HOME</a></li>
   
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">NYC Taxi Analysis</a>
     <div class="dropdown-content">
         
-      <a href="http://drgates.georgetown.domains/US_county_cancer_poll_map.html" target="_blank">Gates Interactive Cancer and Land Use Map</a>
+      <a href="http://stevenyychang.georgetown.domains/Taxi/TAXI_Tab_index.html" target="_blank">Tableau</a>
+      <a href="http://stevenyychang.georgetown.domains/Taxi/TAXI_Kmeans_index.html" target="_blank">Bokeh</a>
   
       
       
@@ -112,7 +112,7 @@ tr{
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Syria and Iraq ISIS events</a>
     <div class="dropdown-content">
-      <a href="https://sites.google.com/site/drgatesanly501/" target="_blank">ANLY501 Data Analytics</a>
+      <a href="http://stevenyychang.georgetown.domains/ISIS/ISIS_index.html" target="_blank">D3</a>
     
     </div>
   </li>
@@ -120,7 +120,7 @@ tr{
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">NBA AllStar Players Analysis</a>
     <div class="dropdown-content">
-      <a href="https://sites.google.com/site/drgatesanly501/" target="_blank">ANLY501 Data Analytics</a>
+      <a href="http://stevenyychang.georgetown.domains/NBA/NBA_index.html" target="_blank">Plotly/Python and R</a>
     
     </div>
   </li>
@@ -128,13 +128,13 @@ tr{
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Star Wars Characters Network</a>
     <div class="dropdown-content">
-      <a href="https://sites.google.com/site/drgatesanly501/" target="_blank">ANLY501 Data Analytics</a>
+      <a href="http://stevenyychang.georgetown.domains/StarWar/StarWar_index.html" target="_blank">NetworkD3/R</a>
     
     </div>
   </li>
 
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Network</a>
+    <a href="javascript:void(0)" class="dropbtn">Network Analysis</a>
     <div class="dropdown-content">
       <a href="https://sites.google.com/site/drgatesanly501/" target="_blank">ANLY501 Data Analytics</a>
     
@@ -144,7 +144,8 @@ tr{
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Global Terrorism Analysis</a>
     <div class="dropdown-content">
-      <a href="https://sites.google.com/site/drgatesanly501/" target="_blank">ANLY501 Data Analytics</a>
+      <a href="http://stevenyychang.georgetown.domains/Terror/terror_R_index.html" target="_blank">R</a>
+      <a href="http://stevenyychang.georgetown.domains/Terror/terror_plotly_index.html" target="_blank">Plotly</a>
     
     </div>
   </li>
@@ -152,7 +153,8 @@ tr{
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Montgomery, MD Crime Analysis</a>
     <div class="dropdown-content">
-      <a href="https://sites.google.com/site/drgatesanly501/" target="_blank">ANLY501 Data Analytics</a>
+      <a href="http://stevenyychang.georgetown.domains/Crime/Crime_Tab_index.html" target="_blank">Tableau</a>
+      <a href="http://stevenyychang.georgetown.domains/Crime/Crime_Bokeh_index.html" target="_blank">Bokeh</a>
     
     </div>
   </li>
@@ -160,16 +162,12 @@ tr{
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Cancer in US</a>
     <div class="dropdown-content">
-        
-      <a href="http://drgates.georgetown.domains/US_county_cancer_poll_map.html" target="_blank">Gates Interactive Cancer and Land Use Map</a>
+      <a href="http://stevenyychang.georgetown.domains/CancerUS/Cancer_index.html" target="_blank">Leafelt/R</a>
   
       
       
     </div>
   </li>
-
-
-
 
 
 </ul>
@@ -189,14 +187,23 @@ tr{
 </iframe>
       </td>
       <td>
-      <p>This visualization is generated using NetworkD3 in R to display the network of the characters in the novel called "A Storm of Swords" written by George R.R. Martin. In the novel, it contains 353 weighted edges connecting 107 characters. Each edge in the network represents an interaction between one character and another. The visual represents the vast network of the interactions among all the characters in the novel.</p> 
+      <p>The visualization is generated using ggplot2/R to visualize current top10 NBA AllStar players` Salary and EFF(efficiency rate) between seasons.</p>
+
+<p>The top left graph is the players` salary by seasons, can clearly see LeBron James` salary jumps significantly high from year 2007-2008, while some of the players remain the same.</p>
+
+<p>The top right graph shows that although LeBron James and Kevin Durant own the highest salary, Durant got the higher salary few year after James does. Also Curry and Harden just been raised the salary which show as an outlier.</p>
+ 
+<p>The bottom left graph is very correlated to the salary and season graph, the player tends to have raised after the season they preform higher EFF.</p>
+
+<p>The bottom right graph shows that nearly every player have the highest salary by now for their career, only with an exception which is LeBron James.</p>
+
          <p><strong>The code and the dataset:</strong><a href = "https://github.com/mchon89/ANLY503/tree/master/network/1"> Click Here</a></p>
       </td>
    </tr>
 
    <tr>
       <td>
-      <p><strong>plotly/Python </strong></p>
+      <p><strong>Plotly/Python </strong></p>
           <html><head>
 <meta charset="utf-8" /></head><body><script type="text/javascript">/**
 * plotly.js v1.30.0
@@ -279,7 +286,10 @@ values:["radial","horizontal","vertical","none"],arrayOk:!0,dflt:"none"},color:{
 </script><div id="861b1f64-9d84-49f2-972d-ae2f4558b93e" style="height: 150%; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("861b1f64-9d84-49f2-972d-ae2f4558b93e", [{"y": [18.6, 9.2, 8.0, 11.6, 9.5, 13.5, 12.7, 8.0, 11.8, 11.0, 9.7, 10.5, 8.7, 10.0, 8.9, 8.2, 9.6, 10.0, 10.3, 12, 9.9, 7.3, 5.8, 6.8, 8.4, 8.1, 6.5, 6.2, 6.5, 2.6, 4.4, 9.0, 8.4, 7.8, 7, 6.3, 4.0, 8.0, 5.3, 6.4, 6.8, 9.2, 3.0, 6.9, 6.2, 3.9, 6.7, 5.0, 4.5, 5.2], "type": "scatter3d", "hoverinfo": "text", "text": ["<br>MissedFT: 2.8<br>MissedFG: 18.6<br>TOV: 6<br>PLAYER: Russell Westbrook", "<br>MissedFT: 2.7<br>MissedFG: 9.2<br>TOV: 4<br>PLAYER: LeBron James", "<br>MissedFT: 0.8<br>MissedFG: 8.0<br>TOV: 2.5<br>PLAYER: Kevin Durant", "<br>MissedFT: 1.3<br>MissedFG: 11.6<br>TOV: 5.4<br>PLAYER: James Harden", "<br>MissedFT: 0.6<br>MissedFG: 9.5<br>TOV: 3.4<br>PLAYER: Stephen Curry", "<br>MissedFT: 1.0<br>MissedFG: 13.5<br>TOV: 3.3<br>PLAYER: Paul George", "<br>MissedFT: 0.3<br>MissedFG: 12.7<br>TOV: 3.3<br>PLAYER: Damian Lillard", "<br>MissedFT: 0.6<br>MissedFG: 8.0<br>TOV: 2.2<br>PLAYER: Kawhi Leonard", "<br>MissedFT: 1.2<br>MissedFG: 11.8<br>TOV: 4.2<br>PLAYER: John Wall", "<br>MissedFT: 0.5<br>MissedFG: 11.0<br>TOV: 2.7<br>PLAYER: Kyrie Irving", "<br>MissedFT: 0.6<br>MissedFG: 9.7<br>TOV: 2.7<br>PLAYER: Chris Paul", "<br>MissedFT: 0.9<br>MissedFG: 10.5<br>TOV: 2.1<br>PLAYER: Bradley Beal", "<br>MissedFT: 3.5<br>MissedFG: 8.7<br>TOV: 3.3<br>PLAYER: Giannis Antetokounmpo", "<br>MissedFT: 1.0<br>MissedFG: 10.0<br>TOV: 1.7<br>PLAYER: Dennis Schroder", "<br>MissedFT: 1.0<br>MissedFG: 8.9<br>TOV: 2<br>PLAYER: Mike Conley", "<br>MissedFT: 1.6<br>MissedFG: 8.2<br>TOV: 3.8<br>PLAYER: Paul Millsap", "<br>MissedFT: 0.4<br>MissedFG: 9.6<br>TOV: 2.2<br>PLAYER: Gordon Hayward", "<br>MissedFT: 1.3<br>MissedFG: 10.0<br>TOV: 3.3<br>PLAYER: Isaiah Thomas", "<br>MissedFT: 1.5<br>MissedFG: 10.3<br>TOV: 2.5<br>PLAYER: Jimmy Butler", "<br>MissedFT: 0.2<br>MissedFG: 12<br>TOV: 3.8<br>PLAYER: CJ McCollum", "<br>MissedFT: 0.9<br>MissedFG: 9.9<br>TOV: 2.5<br>PLAYER: DeMar DeRozan", "<br>MissedFT: 0.3<br>MissedFG: 7.3<br>TOV: 2.5<br>PLAYER: Marc Gasol", "<br>MissedFT: 0.7<br>MissedFG: 5.8<br>TOV: 2<br>PLAYER: Jeff Teague", "<br>MissedFT: 0.7<br>MissedFG: 6.8<br>TOV: 1.7<br>PLAYER: Kevin Love", "<br>MissedFT: 0.3<br>MissedFG: 8.4<br>TOV: 1.7<br>PLAYER: Avery Bradley", "<br>MissedFT: 0.8<br>MissedFG: 8.1<br>TOV: 1.8<br>PLAYER: LaMarcus Aldridge", "<br>MissedFT: 0.2<br>MissedFG: 6.5<br>TOV: 1<br>PLAYER: Lance Stephenson", "<br>MissedFT: 0.7<br>MissedFG: 6.2<br>TOV: 2.1<br>PLAYER: Kyle Lowry", "<br>MissedFT: 1.0<br>MissedFG: 6.5<br>TOV: 1.6<br>PLAYER: George Hill", "<br>MissedFT: 4.9<br>MissedFG: 2.6<br>TOV: 2.4<br>PLAYER: DeAndre Jordan", "<br>MissedFT: 0.4<br>MissedFG: 4.4<br>TOV: 1.8<br>PLAYER: Al Horford", "<br>MissedFT: 0.2<br>MissedFG: 9.0<br>TOV: 1.7<br>PLAYER: Dwyane Wade", "<br>MissedFT: 0.4<br>MissedFG: 8.4<br>TOV: 1.4<br>PLAYER: Klay Thompson", "<br>MissedFT: 0.7<br>MissedFG: 7.8<br>TOV: 1.8<br>PLAYER: Khris Middleton", "<br>MissedFT: 0.2<br>MissedFG: 7<br>TOV: 1.1<br>PLAYER: Serge Ibaka", "<br>MissedFT: 0.5<br>MissedFG: 6.3<br>TOV: 0.7<br>PLAYER: Jae Crowder", "<br>MissedFT: 0.8<br>MissedFG: 4.0<br>TOV: 1.8<br>PLAYER: Greg Monroe", "<br>MissedFT: 0.5<br>MissedFG: 8.0<br>TOV: 1.2<br>PLAYER: Zach Randolph", "<br>MissedFT: 1.2<br>MissedFG: 5.3<br>TOV: 2.1<br>PLAYER: Draymond Green", "<br>MissedFT: 0.4<br>MissedFG: 6.4<br>TOV: 1.3<br>PLAYER: Eric Gordon", "<br>MissedFT: 0.4<br>MissedFG: 6.8<br>TOV: 1.2<br>PLAYER: Joe Johnson", "<br>MissedFT: 1.2<br>MissedFG: 9.2<br>TOV: 1.7<br>PLAYER: Tim Hardaway Jr.", "<br>MissedFT: 0.0<br>MissedFG: 3.0<br>TOV: 1.3<br>PLAYER: Robin Lopez", "<br>MissedFT: 0.0<br>MissedFG: 6.9<br>TOV: 1.3<br>PLAYER: Jamal Crawford", "<br>MissedFT: 0.2<br>MissedFG: 6.2<br>TOV: 1.3<br>PLAYER: Lou Williams", "<br>MissedFT: 0.3<br>MissedFG: 3.9<br>TOV: 0.8<br>PLAYER: Otto Porter Jr.", "<br>MissedFT: 0.5<br>MissedFG: 6.7<br>TOV: 1.6<br>PLAYER: Markieff Morris", "<br>MissedFT: 1.0<br>MissedFG: 5.0<br>TOV: 2.3<br>PLAYER: Al-Farouq Aminu", "<br>MissedFT: 1.2<br>MissedFG: 4.5<br>TOV: 1.5<br>PLAYER: Thaddeus Young", "<br>MissedFT: 0.5<br>MissedFG: 5.2<br>TOV: 1.7<br>PLAYER: Norman Powell"], "marker": {"colorscale": "Viridis", "size": 8, "opacity": 0.8, "color": [6, 4, 2.5, 5.4, 3.4, 3.3, 3.3, 2.2, 4.2, 2.7, 2.7, 2.1, 3.3, 1.7, 2, 3.8, 2.2, 3.3, 2.5, 3.8, 2.5, 2.5, 2, 1.7, 1.7, 1.8, 1, 2.1, 1.6, 2.4, 1.8, 1.7, 1.4, 1.8, 1.1, 0.7, 1.8, 1.2, 2.1, 1.3, 1.2, 1.7, 1.3, 1.3, 1.3, 0.8, 1.6, 2.3, 1.5, 1.7]}, "x": [2.8, 2.7, 0.8, 1.3, 0.6, 1.0, 0.3, 0.6, 1.2, 0.5, 0.6, 0.9, 3.5, 1.0, 1.0, 1.6, 0.4, 1.3, 1.5, 0.2, 0.9, 0.3, 0.7, 0.7, 0.3, 0.8, 0.2, 0.7, 1.0, 4.9, 0.4, 0.2, 0.4, 0.7, 0.2, 0.5, 0.8, 0.5, 1.2, 0.4, 0.4, 1.2, 0.0, 0.0, 0.2, 0.3, 0.5, 1.0, 1.2, 0.5], "mode": "markers", "showlegend": true, "z": [6, 4, 2.5, 5.4, 3.4, 3.3, 3.3, 2.2, 4.2, 2.7, 2.7, 2.1, 3.3, 1.7, 2, 3.8, 2.2, 3.3, 2.5, 3.8, 2.5, 2.5, 2, 1.7, 1.7, 1.8, 1, 2.1, 1.6, 2.4, 1.8, 1.7, 1.4, 1.8, 1.1, 0.7, 1.8, 1.2, 2.1, 1.3, 1.2, 1.7, 1.3, 1.3, 1.3, 0.8, 1.6, 2.3, 1.5, 1.7]}], {"title": "NBA TOP50 AllStar Player Most Embarrassing Records", "scene": {"xaxis": {"zerolinecolor": "rgb(255, 255, 255)", "backgroundcolor": "rgb(200, 200,200)", "showbackground": true, "gridcolor": "rgb(255, 255, 255)", "title": "Missed Free Throws"}, "zaxis": {"zerolinecolor": "rgb(255, 255, 255)", "backgroundcolor": "rgb(200, 210,210)", "showbackground": true, "gridcolor": "rgb(255, 255, 255)", "title": "Turnovers"}, "yaxis": {"zerolinecolor": "rgb(255, 255, 255)", "backgroundcolor": "rgb(220, 220,200)", "showbackground": true, "gridcolor": "rgb(255, 255, 255)", "title": "Missed Field Goals"}}}, {"showLink": true, "linkText": "Export to plot.ly"})</script><script type="text/javascript ">window.addEventListener("resize", function(){Plotly.Plots.resize(document.getElementById("861b1f64-9d84-49f2-972d-ae2f4558b93e"));}); </script></body></html>
       </td>
       <td>
-      <p>This visualization is produced using Plotly to display the network of the characters in the novel in a heatmap called "A Storm of Swords" written by George R.R. Martin. In a form of heatmap, the longer bar and the more bar are along the y-axis, the more the interaction is between the characters. Also, the color legend on the right describes the weight of an interaction between the characters. For instance, at Arya on the x-axis, the vertical bar can clearly be observed, meaning that Aray has lots of interactions among different characters in the novel. As the color intensity reaches to yellow color, the importance of the dynamics between the characters becomes more greater.</p> 
+       <p>This visualization is produced using Plotly to visualize a 3D graph of NBA current TOP 50 players.</p>
+<p>With the xaxis as Missed Field Goals and yaxis as Missed Free Throws, and xaxis as Turnovers. The reason I chose the three record is because the EFF rate of a player which is compute by the formula ` (PTS + REB + AST + STL + BLK &#45; Missed FG &#45; Missed FT &#45; TO) / GP`. Then these three records are those the player will love to keep as minimum as possible.</p>
+<p>Also the graph can show that whether the team reply on a particular player or not. Because although the player struggle on court the team still let the player hold the ball position for more than the others.</p>
+ 
          <p><strong>The code and the dataset:</strong><a href = "https://github.com/mchon89/ANLY503/tree/master/network/2"> Click Here</a></p>
       </td>
    </tr>
