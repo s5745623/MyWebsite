@@ -1,0 +1,111 @@
+---
+title: "Leaflet"
+author: "StevenChang"
+date: "12/1/2017"
+output: html_document
+---
+
+```{r }
+library(leaflet)
+library(sp)
+library(mapproj)
+library(maps)
+library(mapdata)
+library(maptools)
+library(htmlwidgets)
+library(magrittr)
+library(XML)
+library(plyr)
+library(rgdal)
+library(WDI)
+library(raster)
+library(noncensus)
+library(stringr)
+library(tidyr)
+library(tigris)
+library(rgeos)
+library(ggplot2)
+library(scales)
+library(geojsonio)
+data(zip_codes)
+Terror <- read.csv('global_terrorism.csv')
+#Terror <- subset(Terror,nkill!=0)
+Terror <- subset(Terror,country_txt=='United States')
+Hospitals <- read.csv('Hospitals.csv')
+states <- geojson_read("tempgeo.json", what = "sp")
+
+
+
+```
+
+```{r}
+
+#popup
+
+
+popup_hos <- paste0("<strong>Hospital: </strong>", 
+                    Hospitals$NAME, 
+                    "<br><strong>Address: </strong>", 
+                    Hospitals$ADDRESS)
+
+
+popup_ter <- paste0("<strong>Year: </strong>", 
+                    Terror$iyear, 
+                    "<br><strong>Attack Type: </strong>", 
+                    Terror$attacktype1_txt,
+                    "<br><strong>Target Type: </strong>", 
+                    Terror$targtype1_txt,
+                    "<br><strong>Death Count: </strong>", 
+                    Terror$nkill)
+
+
+```
+
+```{r}
+
+pal <- colorQuantile("YlOrRd", NULL, n = 9)
+m <- leaflet(states) %>%
+  setView(-96, 37.8, 4) %>%
+  addProviderTiles("MapBox", options = providerTileOptions(
+    id = "mapbox.light",
+    accessToken = Sys.getenv('MAPBOX_ACCESS_TOKEN')))
+
+labels <- sprintf(
+  "<strong>%s</strong><br/>%g people / mi<sup>2</sup>",
+  states$name, states$density
+) %>% lapply(htmltools::HTML)
+
+m <- m %>% addPolygons(
+  fillColor = ~pal(density),
+  weight = 2,
+  opacity = 1,
+  color = "white",
+  dashArray = "3",
+  fillOpacity = 0.7,
+  highlight = highlightOptions(
+    weight = 5,
+    color = "#666",
+    dashArray = "",
+    fillOpacity = 0.7,
+    bringToFront = TRUE),
+  label = labels,
+  labelOptions = labelOptions(
+    style = list("font-weight" = "normal", padding = "3px 8px"),
+    textsize = "15px",
+    direction = "auto"))%>%
+  
+ addMarkers(data=Hospitals,lat=~LATITUDE, lng=~LONGITUDE, popup=popup_hos, group = "Hospitals",icon = makeIcon("Hos.png", "Hos-16@2x.png", 16, 16)) %>%
+
+  addMarkers(data=Terror,lat=~latitude, lng=~longitude, popup=popup_ter, group = "Terror Attack",icon = makeIcon("terror.png", "terror-16@2x.png", 16, 16)) %>%
+
+
+  # Layers control
+  addLayersControl(
+    baseGroups = c("US population density"),
+    overlayGroups = c("Hospitals",'Terror Attack'),
+    options = layersControlOptions(collapsed = FALSE)
+  ) 
+
+saveWidget(m, 'takehome_leaflet.html', selfcontained = TRUE)
+```
+
