@@ -9,15 +9,14 @@ output: html_document
 ```{r}
 
 # input data, please check the directory before run the script
-edgeList <- read.table("terror_network.csv", sep = ",", header = F)
+edgeList <- read.table("network_ATT_TAR.csv", sep = ",", header = F)
 ```
 
 ```{r}
 colnames(edgeList) <- c("Source", "Target", "Weight")
-edgeList <- subset(edgeList,Source=='Puerto Rico')
 # simplify to remove duplicate edges
-#gD <- igraph::simplify(igraph::graph.data.frame(edgeList, directed=FALSE))
-gD <- igraph::graph.data.frame(edgeList,directed = FALSE)
+gD <- igraph::simplify(igraph::graph.data.frame(edgeList, directed=FALSE))
+#gD <- igraph::graph.data.frame(edgeList,directed = FALSE)
 
 
 #EdgeList
@@ -93,10 +92,10 @@ D3_network_LM <- networkD3::forceNetwork(Links = edgeList, # data frame that con
                                          NodeID = "nName", # value from the node list (data frame) that contains node description we want to use (e.g., node name)
                                          Nodesize = "nodeBetweenness",  # value from the node list (data frame) that contains value we want to use for a node size
                                          Group = "nodeDegree",  # value from the node list (data frame) that contains value we want to use for node color
-                                         height = 300, # Size of the plot (vertical)
-                                         width = 300,  # Size of the plot (horizontal)
+                                         height = 800, # Size of the plot (vertical)
+                                         width = 1100,  # Size of the plot (horizontal)
                                          fontSize = 20, # Font size
-                                         #linkDistance = networkD3::JS("function(d) { return 10*d.value; }"), # Function to determine distance between any two nodes, uses variables already defined in forceNetwork function (not variables from a data frame)
+                                         linkDistance = 150, # Function to determine distance between any two nodes, uses variables already defined in forceNetwork function (not variables from a data frame)
                                          linkWidth = networkD3::JS("function(d) { return d.value/5; }"),# Function to determine link/edge thickness, uses variables already defined in forceNetwork function (not variables from a data frame)
                                          opacity = 0.65, # opacity
                                          zoom = TRUE, # ability to zoom when click on the node
@@ -109,7 +108,7 @@ D3_network_LM <- networkD3::forceNetwork(Links = edgeList, # data frame that con
 
 # Plot network
 D3_network_LM
-networkD3::saveNetwork(D3_network_LM, "D3_Terror_US_TAR_ATT.html", selfcontained = TRUE)
+networkD3::saveNetwork(D3_network_LM, "D3_Terror_US_TAR_ATT2.html", selfcontained = TRUE)
 
 
 ```
