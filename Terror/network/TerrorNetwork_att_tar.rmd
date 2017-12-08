@@ -99,6 +99,7 @@ D3_network_LM <- networkD3::forceNetwork(Links = edgeList, # data frame that con
                                          linkWidth = networkD3::JS("function(d) { return d.value/5; }"),# Function to determine link/edge thickness, uses variables already defined in forceNetwork function (not variables from a data frame)
                                          opacity = 0.65, # opacity
                                          zoom = TRUE, # ability to zoom when click on the node
+                                         #arrow = TRUE,
                                          opacityNoHover = 0.1, # opacity of labels when static
                                          linkColour = edges_col
                                          ) # edge colors
